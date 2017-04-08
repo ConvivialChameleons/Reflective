@@ -11,6 +11,9 @@
     "test": "jest",
     "client-dev": "webpack-dev-server",
     "server-dev": "nodemon server/server.js",
+    "dev": "webpack -d --watch",
+    "run-dev": "webpack-dev-server",
+    "dev-server": "nodemon server/server.js",
     "start": "node server/server.js",
     "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress",
     "lint": "eslint client server"
