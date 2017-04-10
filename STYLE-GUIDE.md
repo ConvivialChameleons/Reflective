@@ -80,6 +80,39 @@ When writing any block of code that is logically subordinate to the line immedia
     var array = ['cat', 'dog', 'fish'];
     ```
 
+### React Components
+
+* For mapping in React's render, use () instead of {} and a return statement. Start your component on a new line.
+
+```javascript
+  this.props.items.map(item => (
+    <Component item={item} />
+  ));
+```
+
+* Single prop components
+
+```javascript
+  <Component data={} />
+```
+
+* Multi-line components
+
+```javascript
+  <Component 
+    data={} 
+    data2={} 
+    data3={} />
+```
+
+* Multi-line HTML components - non-essentials on the same line as opening tag. Important React stuff on subsequent lines.
+
+```
+  <button className="className" 
+    onClick={}
+    data={}>
+  </button>
+```
 
 ### Language constructs
 
