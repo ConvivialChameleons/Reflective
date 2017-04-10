@@ -11,6 +11,9 @@
     "test": "jest",
     "client-dev": "webpack-dev-server",
     "server-dev": "nodemon server/server.js",
+    "dev": "webpack -d --watch",
+    "run-dev": "webpack-dev-server",
+    "dev-server": "nodemon server/server.js",
     "start": "node server/server.js",
     "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress",
     "lint": "eslint client server"
@@ -35,6 +38,7 @@
     "redux": "^3.6.0",
     "redux-logger": "^3.0.1",
     "redux-thunk": "^2.2.0",
+    "twilio": "^2.11.1",
     "webpack": "^2.3.3"
   },
   "devDependencies": {
@@ -48,9 +52,12 @@
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
     "jest": "^19.0.2",
+    "really-need": "^1.9.2",
     "regenerator-runtime": "^0.10.3",
     "webpack-dev-server": "^2.4.2",
-    "react-addons-test-utils": "^15.5.0"
+    "react-addons-test-utils": "^15.5.0",
+    "supertest": "^3.0.0",
+    "webpack-dev-server": "^2.4.2"
   },
   "babel": {
     "presets": [
@@ -58,5 +65,9 @@
       "react",
       "stage-2"
     ]
+  },
+  "jest": {
+    "moduleFileExtensions": ["js", "jsx"],
+    "moduleDirectories": ["node_modules"]
   }
 }
