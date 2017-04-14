@@ -6,7 +6,7 @@ const User = require('../models/users.js');
 router.post('/signup', (req, res) => {
 	// TODO: Add server validation
 	
-	let { email, firstName, lastName, password, phone } = req.body;
+	const { email, firstName, lastName, password, phone } = req.body;
 	let user;
 
 	auth.hash(password)
@@ -20,7 +20,7 @@ router.post('/signup', (req, res) => {
 			});
 		})
 		.then(userFromDb => {
-	//		// TODO: Verify user's number
+			// TODO: Verify user's number
 			Call.sendVerification(userFromDb.phone);
 			user = userFromDb;
 			return auth.sign(user);
@@ -40,7 +40,7 @@ router.post('/signup', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
-	let { email, password } = req.body;	
+	const { email, password } = req.body;	
 	let user;
 	User.findByEmail(email)
 		.then((userFromDb) => {
@@ -70,8 +70,8 @@ router.post('/login', (req, res) => {
 
 router.use('/verify', auth.authMiddleware);
 router.post('/verify', (req, res) => {
-	let verificationCode = req.body.verificationCode;
-	let { user_id, phone } = req.user // from middleware
+	const verificationCode = req.body.verificationCode;
+	const { user_id, phone } = req.user // from middleware
 	Call.verify(phone, 1, verificationCode)
 		.then(response => {
 			if (response) {
