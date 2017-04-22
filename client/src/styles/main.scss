@@ -14,3 +14,12 @@ $logo-font: 'PT Sans Caption';
   border-radius: 0;
   height: 52px;
 }
+
+#nav-dropdown {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  z-index: 1;
+  position: absolute;
+  top: 52px;
+  right: 0;
+}
