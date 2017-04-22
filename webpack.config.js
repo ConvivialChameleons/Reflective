@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const APP_DIR = path.resolve(__dirname, 'client/src');
 const BUILD_DIR = path.resolve(__dirname, 'client/public');
@@ -31,6 +32,10 @@ const config = {
         query: {
           presets: ["es2015", "react"]
         }
+      },
+      {
+        test: /\.scss$/,
+        loader: 'style-loader!css-loader!sass-loader'
       }
     ]
   },
