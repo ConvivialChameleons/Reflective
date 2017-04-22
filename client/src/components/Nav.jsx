@@ -5,22 +5,6 @@ import PropTypes from 'prop-types';
 import { checkCredentials } from '../actions/login.js';
 import NavDropdown from './NavDropdown.jsx';
 
-const navStyle = {
-  marginBottom: '0',
-  borderRadius: '0',
-  height: '52px'
-};
-
-// const logoStyle = {
-//   fontFamily: 'PT Sans Caption',
-//   fontSize: '20px',
-//   color: '#89EEB2'
-// };
-
-const menuStyle = {
-  position: 'relative'
-};
-
 export class Nav extends Component {
   constructor(props) {
     super(props);
@@ -80,7 +64,7 @@ export class Nav extends Component {
 
   render() {
     return (
-      <div id="navbar" className="ui inverted menu" style={navStyle}>
+      <div id="navbar" className="ui inverted menu">
         <a
           className="item"
           onClick={this.onClickHome}
@@ -126,10 +110,7 @@ export class Nav extends Component {
           </div>
         }
         { this.props.user.id &&
-          <div
-            className="right menu"
-            style={menuStyle}
-          >
+          <div className="right menu">
             <a
               className="item"
               onClick={this.onClickMenu}

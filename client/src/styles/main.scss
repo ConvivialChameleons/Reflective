@@ -1,8 +1,16 @@
 $primary-color: #89EEB2;
 $logo-font: 'PT Sans Caption';
 
+@import 'margin';
+
 .logo {
   color: $primary-color;
   font-family: $logo-font;
   font-size: 20px;
+}
+
+#navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  height: 52px;
 }
