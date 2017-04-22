@@ -3,10 +3,6 @@ import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import { phonePrefsUpdate } from '../actions/user_signup.js';
 
-const gridStyle = {
-  marginTop: '14px'
-};
-
 export class Profile extends Component {
   constructor(props) {
     super(props);
@@ -72,7 +68,7 @@ export class Profile extends Component {
     return (
       <div
         className="ui grid"
-        style={gridStyle}
+        style={{ marginTop: '14px' }}
       >
         <div className="twelve wide column centered">
           <form className="ui form">
