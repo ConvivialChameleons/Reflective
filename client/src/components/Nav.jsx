@@ -11,11 +11,11 @@ const navStyle = {
   height: '52px'
 };
 
-const logoStyle = {
-  fontFamily: 'PT Sans Caption',
-  fontSize: '20px',
-  color: '#89EEB2'
-};
+// const logoStyle = {
+//   fontFamily: 'PT Sans Caption',
+//   fontSize: '20px',
+//   color: '#89EEB2'
+// };
 
 const menuStyle = {
   position: 'relative'
@@ -85,7 +85,7 @@ export class Nav extends Component {
           className="item"
           onClick={this.onClickHome}
         >
-          <span style={logoStyle}>Reflective</span>
+          <span className="logo">Reflective</span>
         </a>
         {this.props.user.id &&
           <a
