@@ -22,8 +22,7 @@ export class CallMeNow extends Component {
       >
         <button
           id="call-now"
-          className="huge ui button"
-          style={{ backgroundColor: '#89EEB2' }}
+          className="huge ui button primary-color"
           onClick={this.onClickCall}
         >
           Call Me Now
