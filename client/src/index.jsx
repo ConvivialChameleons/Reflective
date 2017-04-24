@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { history, configureStore } from './configureStore.js';
 import Root from './components/Root.jsx';
+import('./styles/main.scss');
 
 const store = configureStore();
 

@@ -3,15 +3,6 @@ import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import PropTypes from 'prop-types';
 
-const menuStyle = {
-  borderTopLeftRadius: '0',
-  borderTopRightRadius: '0',
-  zIndex: '1',
-  position: 'absolute',
-  top: '52px',
-  right: '0'
-};
-
 export class NavDropdown extends Component {
   constructor(props) {
     super(props);
@@ -36,10 +27,7 @@ export class NavDropdown extends Component {
   render() {
     return (
       <div>
-        <div
-          className="ui inverted vertical menu"
-          style={menuStyle}
-        >
+        <div className="ui inverted vertical menu nav-dropdown">
           <a
             className="item"
             onClick={this.onClickProfile}

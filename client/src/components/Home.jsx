@@ -12,10 +12,6 @@ const bgStyle = {
   backgroundSize: 'cover'
 };
 
-const containerStyle = {
-  marginTop: '12%'
-};
-
 export class Home extends Component {
   constructor(props) {
     super(props);
@@ -41,7 +37,7 @@ export class Home extends Component {
       >
         <div
           className="ui text container"
-          style={containerStyle}
+          style={{ marginTop: '12%' }}
         >
           <h1 className="ui inverted header">Reflective</h1>
           <h3>Get a 60 second phone call every day to record your how your day went.</h3>
