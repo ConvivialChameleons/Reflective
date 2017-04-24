@@ -17,13 +17,13 @@ $logo-font: 'PT Sans Caption';
   background-color: #89EEB2;
 }
 
-#navbar {
+.navbar.navbar {
   margin-bottom: 0;
   border-radius: 0;
   height: 52px;
 }
 
-#nav-dropdown {
+.nav-dropdown.nav-dropdown {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   z-index: 1;

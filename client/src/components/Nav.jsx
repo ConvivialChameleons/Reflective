@@ -64,7 +64,7 @@ export class Nav extends Component {
 
   render() {
     return (
-      <div id="navbar" className="ui inverted menu">
+      <div className="ui inverted menu navbar">
         <a
           className="item"
           onClick={this.onClickHome}

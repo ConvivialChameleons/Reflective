@@ -27,10 +27,7 @@ export class NavDropdown extends Component {
   render() {
     return (
       <div>
-        <div
-          className="ui inverted vertical menu"
-          id="nav-dropdown"
-        >
+        <div className="ui inverted vertical menu nav-dropdown">
           <a
             className="item"
             onClick={this.onClickProfile}
