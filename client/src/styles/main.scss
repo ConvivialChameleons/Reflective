@@ -1,8 +1,11 @@
+$primary-color: #89EEB2;
+$logo-font: 'PT Sans Caption';
 
+@import 'margin';
 
 .logo {
-  color: #89EEB2;
-  font-family: 'PT Sans Caption';
+  color: $primary-color;
+  font-family: $logo-font;
   font-size: 20px;
 }
 
