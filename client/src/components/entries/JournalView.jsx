@@ -53,15 +53,27 @@ export class JournalView extends Component {
 
     return (
       <div className="ui centered grid container">
-          <Timeline
-            byDate={byDate}
-            onMonthClick={this.onMonthClick}
-            active={activeMonth}
-          />
+          { this.props.isFetchingEntries &&
+            <div style={{ height: '100%' }}>
+              <div className="ui active inverted dimmer">
+                <div className="ui text loader">Loading Entries</div>
+              </div>
+              <p></p>
+            </div>
+          }
+          { !this.props.isFetchingEntries &&
+            <Timeline
+              byDate={byDate}
+              onMonthClick={this.onMonthClick}
+              active={activeMonth}
+            />
+          }
           { this.props.entries.length === 0 &&
+            !this.props.isFetchingEntries &&
             <Welcome />
           }
           { this.props.entries.length > 0 &&
+            !this.props.isFetchingEntries &&
             <EntryList
               entries={entries}
               onDelete={this.onDeleteEntry}
@@ -77,7 +89,8 @@ const mapStateToProps = state => (
     userId: state.user.id,
     entries: state.entries.displayedEntries,
     byDate: state.entries.byDate,
-    activeMonth: state.entries.activeMonth
+    activeMonth: state.entries.activeMonth,
+    isFetchingEntries: state.entries.isFetching
   }
 );
 
